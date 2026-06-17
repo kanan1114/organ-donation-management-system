@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Edit Donor</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">🏠 Home</a>
+<a href="/dashboard">📊 Dashboard</a>
+<a href="/donors">🫀 Donors</a>
+<a href="/add_donor">➕ Add Donor</a>
+<a href="/recipients">🧍 Recipients</a>
+<a href="/hospitals">🏥 Hospitals</a>
+<a href="/transplants">💉 Transplants</a>
+<a href="/search">🔍 Search</a>
+<a href="/matches">🤝 Matches</a>
+<a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1 class="page-title">
+Edit Donor
+</h1>
+
+</div>
+
+<div class="content-panel">
+
+<form method="POST">
+
+<input type="text"
+name="donor_name"
+value="{{ donor[1] }}">
+
+<input type="number"
+name="age"
+value="{{ donor[2] }}">
+
+<input type="text"
+name="city"
+value="{{ donor[6] }}">
+
+<input type="text"
+name="contact"
+value="{{ donor[7] }}">
+
+<button type="submit">
+Update Donor
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

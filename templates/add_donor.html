@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Add Donor</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">🏠 Home</a>
+<a href="/dashboard">📊 Dashboard</a>
+<a href="/donors">🫀 Donors</a>
+<a href="/add_donor">➕ Add Donor</a>
+<a href="/recipients">🧍 Recipients</a>
+<a href="/hospitals">🏥 Hospitals</a>
+<a href="/transplants">💉 Transplants</a>
+<a href="/search">🔍 Search</a>
+<a href="/matches">🤝 Matches</a>
+<a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1 class="page-title">
+Add New Donor
+</h1>
+
+</div>
+
+<div class="content-panel">
+
+<form method="POST">
+
+<input type="number"
+name="donor_id"
+placeholder="Donor ID">
+
+<input type="text"
+name="donor_name"
+placeholder="Donor Name">
+
+<input type="number"
+name="age"
+placeholder="Age">
+
+<input type="text"
+name="gender"
+placeholder="Gender">
+
+<input type="text"
+name="blood_group"
+placeholder="Blood Group">
+
+<input type="text"
+name="organ_type"
+placeholder="Organ Type">
+
+<input type="text"
+name="city"
+placeholder="City">
+
+<input type="text"
+name="contact"
+placeholder="Contact Number">
+
+<button type="submit">
+Add Donor
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>

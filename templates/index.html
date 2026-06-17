@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>OrganCare Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">🏠 Home</a>
+<a href="/dashboard">📊 Dashboard</a>
+<a href="/donors">🫀 Donors</a>
+<a href="/add_donor">➕ Add Donor</a>
+<a href="/recipients">🧍 Recipients</a>
+<a href="/hospitals">🏥 Hospitals</a>
+<a href="/transplants">💉 Transplants</a>
+<a href="/search">🔍 Search</a>
+<a href="/matches">🤝 Matches</a>
+<a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1>
+Organ Donation Management System
+</h1>
+
+<a href="/logout"
+class="logout-btn">
+Logout
+</a>
+
+</div>
+
+<div class="hero-section">
+
+<h1>
+Saving Lives Through
+Smart Organ Matching
+</h1>
+
+<p>
+Advanced healthcare database system
+powered by Oracle DBMS, PL/SQL,
+Flask and dynamic hospital management.
+</p>
+
+<div class="quick-actions">
+
+<a href="/add_donor"
+class="action-btn">
+Add Donor
+</a>
+
+<a href="/matches"
+class="action-btn">
+Find Matches
+</a>
+
+<a href="/dashboard"
+class="action-btn">
+View Analytics
+</a>
+
+</div>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>{{ donor_count }}</h2>
+<p>Total Donors</p>
+</div>
+
+<div class="stat-card">
+<h2>{{ recipient_count }}</h2>
+<p>Total Recipients</p>
+</div>
+
+<div class="stat-card">
+<h2>{{ hospital_count }}</h2>
+<p>Connected Hospitals</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Emergency Services</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

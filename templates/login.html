@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Login</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:
+    linear-gradient(
+        rgba(15,23,42,0.92),
+        rgba(15,23,42,0.96)
+    ),
+    url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.login-box{
+    width:420px;
+    background:rgba(17,24,39,0.9);
+    padding:45px;
+    border-radius:28px;
+    backdrop-filter:blur(14px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.login-box h1{
+    text-align:center;
+    margin-bottom:35px;
+    color:#38bdf8;
+    font-size:42px;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>
+OrganCare
+</h1>
+
+<p class="login-subtitle">
+Healthcare Organ Management System
+</p>
+
+<form method="POST">
+
+<input type="text"
+name="username"
+placeholder="Username">
+
+<input type="password"
+name="password"
+placeholder="Password">
+
+<button type="submit">
+Login
+</button>
+
+{% if error %}
+
+<p style="
+margin-top:20px;
+color:#f87171;
+text-align:center;
+font-weight:600;">
+
+{{ error }}
+
+</p>
+
+{% endif %}
+
+</form>
+
+</div>
+
+</body>
+</html>

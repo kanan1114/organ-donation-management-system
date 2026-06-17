@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Transplants</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">Home</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/donors">Donors</a>
+<a href="/add_donor">Add Donor</a>
+<a href="/recipients">Recipients</a>
+<a href="/hospitals">Hospitals</a>
+<a href="/transplants">Transplants</a>
+<a href="/search">Search</a>
+<a href="/matches">Matches</a>
+<a href="/logout">Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1>
+Transplant Records
+</h1>
+
+</div>
+
+<div class="content-panel">
+
+<table>
+
+<tr>
+<th>Donor</th>
+<th>Recipient</th>
+<th>Status</th>
+<th>Date</th>
+</tr>
+
+{% for t in transplants %}
+
+<tr>
+
+<td>{{ t[0] }}</td>
+<td>{{ t[1] }}</td>
+<td>{{ t[2] }}</td>
+<td>{{ t[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+</div>
+</body>
+</html>

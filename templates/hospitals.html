@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Hospitals</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">Home</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/donors">Donors</a>
+<a href="/add_donor">Add Donor</a>
+<a href="/recipients">Recipients</a>
+<a href="/hospitals">Hospitals</a>
+<a href="/transplants">Transplants</a>
+<a href="/search">Search</a>
+<a href="/matches">Matches</a>
+<a href="/logout">Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1>
+Hospitals
+</h1>
+
+</div>
+
+<div class="content-panel">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Hospital Name</th>
+<th>City</th>
+<th>Contact</th>
+</tr>
+
+{% for h in hospitals %}
+
+<tr>
+
+<td>{{ h[0] }}</td>
+<td>{{ h[1] }}</td>
+<td>{{ h[2] }}</td>
+<td>{{ h[3] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Donors</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">Home</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/donors">Donors</a>
+<a href="/add_donor">Add Donor</a>
+<a href="/recipients">Recipients</a>
+<a href="/hospitals">Hospitals</a>
+<a href="/transplants">Transplants</a>
+<a href="/search">Search</a>
+<a href="/matches">Matches</a>
+<a href="/logout">Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1>
+Registered Donors
+</h1>
+
+</div>
+
+<div class="content-panel">
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Gender</th>
+<th>Blood Group</th>
+<th>Organ</th>
+<th>City</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+
+{% for donor in donors %}
+
+<tr>
+
+<td>{{ donor[0] }}</td>
+<td>{{ donor[1] }}</td>
+<td>{{ donor[2] }}</td>
+<td>{{ donor[3] }}</td>
+<td>{{ donor[4] }}</td>
+<td>{{ donor[5] }}</td>
+<td>{{ donor[6] }}</td>
+
+<td>
+
+<a href="/edit_donor/{{ donor[0] }}"
+class="btn">
+
+Edit
+
+</a>
+
+</td>
+
+<td>
+
+<a href="/delete_donor/{{ donor[0] }}"
+class="btn"
+style="background:#ef4444;">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+</div>
+</body>
+</html>

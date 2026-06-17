@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">
+OrganCare
+</div>
+
+<a href="/">Home</a>
+<a href="/dashboard">Dashboard</a>
+<a href="/donors">Donors</a>
+<a href="/add_donor">Add Donor</a>
+<a href="/recipients">Recipients</a>
+<a href="/hospitals">Hospitals</a>
+<a href="/transplants">Transplants</a>
+<a href="/search">Search</a>
+<a href="/matches">Matches</a>
+<a href="/logout">Logout</a>
+
+</div>
+
+<div class="main-content">
+
+<div class="topbar">
+
+<h1>
+System Analytics
+</h1>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h2>{{ donor_count }}</h2>
+<p>Total Donors</p>
+</div>
+
+<div class="stat-card">
+<h2>{{ recipient_count }}</h2>
+<p>Total Recipients</p>
+</div>
+
+<div class="stat-card">
+<h2>{{ hospital_count }}</h2>
+<p>Total Hospitals</p>
+</div>
+
+<div class="stat-card">
+<h2>{{ transplant_count }}</h2>
+<p>Total Transplants</p>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
